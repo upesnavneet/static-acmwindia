@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "acm/side-bar",
+  "version": "0.1.0",
+  "title": "ACM Side Bar",
+  "category": "acm-category",
+  "icon": "aside",
+  "description": "This is a side bar block, which lets you add other blocks to your side bar.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "acm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

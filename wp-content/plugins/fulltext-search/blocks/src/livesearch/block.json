@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wpfts/livesearch",
+	"version": "0.1.0",
+	"title": "WPFTS :: Live Search",
+	"category": "widgets",
+	"icon": "search",
+	"description": "Custom Live Search Widget from WP Fast Total Search that you can customize",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "fulltext-search",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

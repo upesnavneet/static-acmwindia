@@ -1,0 +1,73 @@
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+.wp-block-acm-footer {
+  background: #282828;
+  color: white;
+  max-width: 1176px;
+  margin: 0 auto;
+}
+.wp-block-acm-footer .container {
+  display: flex;
+}
+.wp-block-acm-footer .container .social-media {
+  padding: 1rem;
+}
+.wp-block-acm-footer .container .social-media ul {
+  padding: 1rem 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wp-block-acm-footer .container .social-media ul li {
+  flex-grow: 1;
+  width: 33%;
+  list-style: none;
+  text-align: center;
+}
+.wp-block-acm-footer .container .links-container {
+  width: 100%;
+  padding: 0.5rem;
+}
+.wp-block-acm-footer .container .links-container > .block-editor-inner-blocks {
+  height: auto;
+}
+.wp-block-acm-footer .container .links-container > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  height: auto;
+}
+.wp-block-acm-footer .container .links-container h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wp-block-acm-footer .container .links-container li {
+  list-style: none;
+}
+.wp-block-acm-footer .container .links-container li a {
+  text-decoration: none;
+  color: #b7b7b7;
+}
+.wp-block-acm-footer .bottom-menu {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  padding: 1rem;
+}
+.wp-block-acm-footer .bottom-menu ul {
+  margin: 0;
+  display: flex;
+}
+.wp-block-acm-footer .bottom-menu ul a {
+  color: white;
+}
+.wp-block-acm-footer .bottom-menu ul li {
+  list-style: none;
+  padding: 0 1rem;
+}
+.wp-block-acm-footer .bottom-menu ul li:not(:last-of-type) {
+  border-right: 1px solid white;
+}
+
+/*# sourceMappingURL=index.css.map*/

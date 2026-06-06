@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "acm/banner",
+  "version": "0.1.0",
+  "title": "ACM Banner",
+  "category": "acm-category",
+  "icon": "dashicons-align-wide",
+  "description": "This is a banner for front page. Please visit identitystandards.acm.org for logos and banners (see the link in 'Select block image')",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "acm",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

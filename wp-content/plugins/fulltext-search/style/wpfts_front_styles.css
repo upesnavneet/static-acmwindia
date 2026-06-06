@@ -1,0 +1,67 @@
+/**
+ * This CSS snippet will be automatically minimized 
+ * upon usage with a frontend. 
+ * (Comments, tabs and spaces will be removed)
+ */
+.wpfts-result-item .wpfts-smart-excerpt {	
+	/* Excerpt text */
+}
+.wpfts-result-item .wpfts-smart-excerpt b {
+	/* Highlighted words */
+	font-weight: bold !important;
+}
+.wpfts-result-item .wpfts-not-found {
+	/* Not found text */
+	color: #808080;
+	font-size: 0.9em;
+}
+.wpfts-result-item .wpfts-score {
+	/* Score text */
+	color: #006621;
+	font-size: 0.9em;
+}
+.wpfts-shift {	
+	/* Space between score and download link */
+	margin-left: 40px;
+}
+.wpfts-result-item .wpfts-download-link {
+	/* Download link */
+	color: #006621;
+	font-size: 0.9em;
+}
+.wpfts-result-item .wpfts-file-size {
+	/* Filesize number */
+	color: #006621;
+	font-size: 0.9em;
+}
+.wpfts-result-item .wpfts-sentence-link {
+	/* Link on a sentence */
+	text-decoration: none;
+	cursor: pointer;
+	color: unset;
+}
+.wpfts-result-item .wpfts-sentence-link:hover {
+	/* Link on a sentence when mouse over it */
+	text-decoration: underline;
+	color: inherit;
+}
+.wpfts-result-item .wpfts-word-link {
+	/* Link on a word */
+	text-decoration: none;
+	cursor: pointer;
+}
+.wpfts-result-item .wpfts-word-link:hover {
+	/* Link on a word when mouse over it */
+	text-decoration: underline;
+}
+/* Smart Text Fragments styles */
+wpfts-highlight.wpfts-highlight-sentence {
+	/* Highlighted sentence */
+	background-color: rgba(255, 255, 128, 0.5) !important;
+	display: inline-block;
+}
+wpfts-highlight.wpfts-highlight-word {
+	/* Highlighted words */
+	background-color: rgba(255, 128, 128, 0.5) !important;
+	display: inline-block;
+}

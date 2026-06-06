@@ -1,0 +1,47 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.footer-bottom-menu.footer-bottom-menu {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  padding: 1rem;
+}
+.footer-bottom-menu.footer-bottom-menu ul {
+  margin: 0;
+  display: flex;
+}
+.footer-bottom-menu.footer-bottom-menu ul a {
+  color: white;
+}
+.footer-bottom-menu.footer-bottom-menu ul a span {
+  font-size: 0.7rem;
+}
+.footer-bottom-menu.footer-bottom-menu ul li {
+  list-style: none;
+  padding: 0 1rem;
+}
+.footer-bottom-menu.footer-bottom-menu ul li:not(:last-of-type) {
+  border-right: 1px solid white;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-bottom-menu.footer-bottom-menu {
+    flex-direction: column;
+  }
+  .footer-bottom-menu.footer-bottom-menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-bottom-menu.footer-bottom-menu ul li:not(:last-of-type) {
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+  .footer-nav {
+    padding: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
