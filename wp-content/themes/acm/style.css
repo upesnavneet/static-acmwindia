@@ -5615,6 +5615,7 @@ footer nav li:first-child {
   display: table;
   */
   margin: 1em 0;
+  padding-left: 10px;
   width: 100%;
   text-align: left;
 }
