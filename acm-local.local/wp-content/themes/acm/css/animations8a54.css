@@ -1,0 +1,618 @@
+/* --- Lenis Smooth Scrolling Styles --- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger delays for children */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* --- Hero Banner Text Intro Animations --- */
+.banner-content .banner-heading small {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.banner-content .banner-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.banner-content p:not(.banner-heading) {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Sticky Glassmorphic Header Navigation --- */
+@media only screen and (min-width: 1130px) {
+  /* Set transition on the navigation element */
+  .top-bar.main-nav {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .top-bar.main-nav.sticky-nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    z-index: 9999 !important;
+    background: rgba(0, 90, 131, 0.8) !important; /* Semi-transparent ACM primary blue */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 40px !important;
+    animation: stickySlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .top-bar.main-nav.sticky-nav section li > a {
+    color: #ffffff !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    transition: color 0.3s ease;
+  }
+
+  .top-bar.main-nav.sticky-nav section li > a:hover {
+    color: #b9dfe9 !important;
+  }
+}
+
+@keyframes stickySlideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* --- Modern Glassmorphism Background --- */
+body {
+  background-color: #e6e6e6 !important; /* Noticeably more grey base */
+}
+
+/* --- Glassmorphic Cards & Containers --- */
+.shadowed.cta,
+.post,
+#secondary .widget,
+.acm-w-intro {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 48, 73, 0.05) !important;
+  border-radius: 12px !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.4s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Interactive Card hover state */
+.shadowed.cta:hover,
+.post:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 48px 0 rgba(0, 90, 131, 0.15) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 1) !important;
+}
+
+/* Image zoom inside cards on hover */
+.shadowed.cta .text-wrap img,
+.post .entrytext img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadowed.cta:hover .text-wrap img {
+  transform: scale(1.04);
+}
+
+/* Custom interactive accent line for cards */
+.shadowed.cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #005a83, #008cba);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadowed.cta:hover::after {
+  transform: scaleX(1);
+}
+
+/* Navigation Menu hover underline micro-animation */
+.top-bar.main-nav section li.menu-item > a::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background-color: #b9dfe9;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.top-bar.main-nav section li.menu-item > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- Unified Alignment & Spacing --- */
+
+/* Constrain the navbar links inside the same max-width as the Foundation .row grid */
+.top-bar.main-nav > .top-bar-section {
+  max-width: 73.5rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Ensure fallback menu container also aligns to the grid */
+.top-bar.main-nav .menu-container {
+  max-width: 73.5rem;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.top-bar.main-nav .menu-container ul {
+  padding-left: 0 !important;
+}
+
+/* Keep the header row properly spaced */
+#header.row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Align the main content area consistently */
+.article#maincontent {
+  max-width: 73.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Consistent spacing for the content row inside article */
+.article#maincontent > article > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Zone-1 content column consistent padding */
+.article#maincontent .zone-1 {
+  padding-left: 1rem;
+}
+
+/* Sidebar alignment */
+#secondary {
+  padding-right: 1rem;
+}
+
+/* --- ACM-W India Premium Light Modern Theme --- */
+
+/* Canvas background override for the maincontent container */
+.article#maincontent {
+  background: #f8fafc !important; /* Soft greyish white */
+  color: #1e293b !important;
+  transition: background 0.5s ease;
+}
+
+/* Text styles & gradients */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-lead {
+  color: #334155 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.8 !important;
+  font-family: Roboto, sans-serif;
+}
+
+.text-muted-glass {
+  color: #475569 !important;
+  font-size: 0.8rem !important;
+  line-height: 1.6 !important;
+  font-family: Roboto, sans-serif;
+}
+
+.glass-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.05) !important;
+  padding: 2.5rem !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 15px 40px 0 rgba(2, 132, 199, 0.1) !important;
+  transform: translateY(-4px);
+}
+
+/* Smaller or Grid Cards */
+.glass-grid-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.04) !important;
+  padding: 2rem !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-grid-card:hover {
+  border-color: #7dd3fc !important;
+  box-shadow: 0 12px 32px 0 rgba(2, 132, 199, 0.08) !important;
+  transform: translateY(-4px);
+}
+
+.glass-grid-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7, #0369a1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-grid-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Pills & tags */
+.glass-tag {
+  background: #e0f2fe !important;
+  border: 1px solid #bae6fd !important;
+  color: #0369a1 !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 20px !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Statistical Counter design */
+.stat-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Premium buttons */
+.btn-primary-glass {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 0.85rem 2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.btn-primary-glass:hover {
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.btn-secondary-glass {
+  background: #ffffff !important;
+  color: #0369a1 !important;
+  border: 2px solid #0369a1 !important;
+  border-radius: 30px !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.btn-secondary-glass:hover {
+  background: #f0f9ff !important;
+  transform: translateY(-3px);
+}
+
+#secondary .widget {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.04) !important;
+  border-radius: 14px !important;
+  padding: 1.5rem !important;
+  color: #334155 !important;
+  font-size: 0.8rem !important;
+}
+
+#secondary .widget-title {
+  color: #0f172a !important;
+  border-bottom: 2px solid #bae6fd !important;
+  font-weight: 700 !important;
+  font-size: 1.2rem !important;
+}
+
+#secondary .widget a {
+  color: #0284c7 !important;
+  transition: color 0.3s ease;
+  font-size: 0.8rem !important;
+}
+
+#secondary .widget a:hover {
+  color: #0369a1 !important;
+  text-decoration: underline !important;
+}
+
+#secondary .widget li {
+  border-bottom: 1px solid #f1f5f9 !important;
+  padding: 0.6rem 0 !important;
+  font-size: 0.8rem !important;
+}
+
+/* Custom CSS to target tagembed social feed elements if rendered in DOM */
+.tagembed-widget,
+.tagembed-widget *,
+.tagembed-social-feed,
+.tagembed-social-feed * {
+  font-size: 0.8rem !important;
+}
+
+/* How to start chapter step number bubble */
+.step-bubble {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #0369a1, #0284c7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+}
+
+/* Grid layout columns height adjustments */
+.eq-row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eq-row-flex > [class*="column"] {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   Roboto Condensed Typography System — Header Elements Only
+   Navigation: 15px, weight 400
+   Hero Heading: 30px, weight 700
+   Section Headings: 24px, weight 700
+   ============================================================ */
+
+/* --- Navigation Menu --- */
+.top-bar.main-nav section li.menu-item > a {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+}
+
+/* Fallback menu links */
+.menu-container .menu-item a {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+/* --- Hero Banner Heading --- */
+.banner-heading {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* --- Section Headings (h2, h3 in main content) --- */
+.intro-section h2,
+.intro-section h3,
+.article#maincontent h2,
+.article#maincontent h3,
+.zone-1 h2,
+.zone-1 h3 {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* Hero-sized section headings (Mission/Vision/Values, Milestones) keep larger size */
+.zone-1 > div > h2[style*="2.2rem"],
+.zone-1 > div > h3[style*="2.2rem"] {
+  font-size: 30px !important;
+}
+
+/* Timeline item titles */
+.timeline-item div[style*="font-family: 'Roboto Condensed'"] {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+}
+
+/* Mission/Vision/Values card titles inside the blue panels */
+.zone-1 h3[style*="color: #fff"] {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+/* Header branding text */
+.acmw-title,
+.acmw-title-mobile {
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.acmw-title-mobile {
+  font-size: 15px !important;
+}
+
+/* Sidebar widget titles */
+#secondary .widget-title {
+  font-family: 'Roboto Condensed', Helvetica, Roboto, Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+
+
+/* Fix navbar tab click CSS */
+.top-bar.main-nav section li.menu-item > a:focus,
+.top-bar.main-nav section li.menu-item > a:active {
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #b9dfe9 !important;
+}
+
+/* Fix navbar tab click CSS for menu-container */
+.top-bar.main-nav .menu-container li.menu-item > a:focus,
+.top-bar.main-nav .menu-container li.menu-item > a:active {
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #b9dfe9 !important;
+}
+
+/* Override light blue backgrounds in navbar to dark */
+.top-bar-section ul li.active > a,
+.top-bar-section ul li:hover:not(.has-form) > a,
+.top-bar-section ul li.active > a:hover,
+.top-bar-section li.hover > a:not(.button),
+.top-bar-section li.active:not(.has-form) a:not(.button),
+.top-bar-section li.active:not(.has-form) a:not(.button):hover,
+.no-js .top-bar-section ul li:active > a,
+.no-js .top-bar-section ul li:hover > a,
+.nav__dropdown,
+.section-nav,
+.more-list-box,
+.nav-menu .menu-item .sub-menu,
+.nav-menu .sub-menu .menu-item a,
+.top-bar.main-nav .menu-container li.menu-item > a:active,
+.top-bar.main-nav .menu-container li.menu-item.active > a,
+.top-bar.main-nav .menu-container li.menu-item:hover > a {
+  background: #0f172a !important;
+  color: #ffffff !important;
+}

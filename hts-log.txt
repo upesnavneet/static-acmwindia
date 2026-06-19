@@ -1,0 +1,54 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 20 Jun 2026 04:15:45 at http://acm-local.local/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://acm-local.local/ -O1 "E:\acm-static-build" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+04:16:34	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/xmlrpc.php?rsd (from acm-local.local/)
+04:16:35	Error: 	"Bad Request" (400) at link acm-local.local/wp-admin/admin-ajax.php (from acm-local.local/)
+04:16:35	Error: 	"Not Found" (404) at link acm-local.local/www.vcita.com/widgets/active_engage/wordpress.demo/loader.js?format=js (from acm-local.local/)
+04:16:35	Error: 	"Not Found" (404) at link acm-local.local/livesite.js (from acm-local.local/)
+04:16:35	Error: 	"Not Found" (404) at link acm-local.local/loader.js (from acm-local.local/)
+04:16:35	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/wp-json/tribe/events/v1/ (from acm-local.local/)
+04:16:45	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/executive-committee/ (from acm-local.local/)
+04:16:47	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/flagship-events/ (from acm-local.local/)
+04:17:48	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/wp-content/themes/acm/img/fonts/fontawesome-webfont.woff2?v=4.3.0 (from acm-local.local/wp-content/themes/acm/style.css?ver=1781032743)
+04:17:48	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/wp-content/themes/acm/img/fonts/fontawesome-webfont.woff?v=4.3.0 (from acm-local.local/wp-content/themes/acm/style.css?ver=1781032743)
+04:17:48	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/wp-content/themes/acm/img/social-media/facebook.svg (from acm-local.local/wp-content/themes/acm/style.css?ver=1781032743)
+04:17:49	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/xmlrpc.php?rsd (from acm-local.local/)
+04:17:49	Warning: 	Moved Permanently for acm-local.local/?p=18
+04:17:49	Warning: 	File has moved from acm-local.local/?p=18 to http://acm-local.local/about/
+04:17:49	Error: 	"Not Found" (404) at link acm-local.local/about/www.vcita.com/widgets/active_engage/wordpress.demo/loader.js?format=js (from acm-local.local/about/)
+04:17:49	Error: 	"Not Found" (404) at link acm-local.local/about/livesite.js (from acm-local.local/about/)
+04:17:49	Error: 	"Not Found" (404) at link acm-local.local/about/loader.js (from acm-local.local/about/)
+04:17:58	Warning: 	Moved Permanently for acm-local.local/?p=27
+04:17:58	Warning: 	File has moved from acm-local.local/?p=27 to http://acm-local.local/student-chapters/
+04:17:58	Error: 	"Not Found" (404) at link acm-local.local/student-chapters/www.vcita.com/widgets/active_engage/wordpress.demo/loader.js?format=js (from acm-local.local/student-chapters/)
+04:17:58	Error: 	"Not Found" (404) at link acm-local.local/student-chapters/livesite.js (from acm-local.local/student-chapters/)
+04:17:58	Error: 	"Not Found" (404) at link acm-local.local/student-chapters/loader.js (from acm-local.local/student-chapters/)
+04:17:58	Warning: 	Retry after error -5 (Unable to get server's address: No such host is known. ) at link https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png (from acm-local.local/student-chapters/)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/wp-content/themes/fonts/glyphicons-halflings-regular.eot (from acm-local.local/wp-content/themes/acm/acm-blessed1.css?z=1465521440117)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/wp-content/themes/fonts/glyphicons-halflings-regular.eot? (from acm-local.local/wp-content/themes/acm/acm-blessed1.css?z=1465521440117)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/wp-content/themes/fonts/glyphicons-halflings-regular.woff (from acm-local.local/wp-content/themes/acm/acm-blessed1.css?z=1465521440117)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/wp-content/themes/fonts/glyphicons-halflings-regular.ttf (from acm-local.local/wp-content/themes/acm/acm-blessed1.css?z=1465521440117)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/wp-content/themes/fonts/glyphicons-halflings-regular.svg (from acm-local.local/wp-content/themes/acm/acm-blessed1.css?z=1465521440117)
+04:17:59	Warning: 	Moved Permanently for acm-local.local/?p=20
+04:17:59	Warning: 	File has moved from acm-local.local/?p=20 to http://acm-local.local/executive-committee/
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/executive-committee/www.vcita.com/widgets/active_engage/wordpress.demo/loader.js?format=js (from acm-local.local/executive-committee/)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/executive-committee/livesite.js (from acm-local.local/executive-committee/)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/executive-committee/loader.js (from acm-local.local/executive-committee/)
+04:17:59	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Facm-local.local%2Fflagship-events%2F&format=xml (from acm-local.local/flagship-events/)
+04:17:59	Warning: 	Moved Permanently for acm-local.local/?p=25
+04:17:59	Warning: 	File has moved from acm-local.local/?p=25 to http://acm-local.local/flagship-events/
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/flagship-events/www.vcita.com/widgets/active_engage/wordpress.demo/loader.js?format=js (from acm-local.local/flagship-events/)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/flagship-events/livesite.js (from acm-local.local/flagship-events/)
+04:17:59	Error: 	"Not Found" (404) at link acm-local.local/flagship-events/loader.js (from acm-local.local/flagship-events/)
+04:18:51	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/AICWiC.png (from acm-local.local/flagship-events/)
+04:18:51	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png (from acm-local.local/student-chapters/)
+04:18:51	Warning: 	Retry after error -4 (No data (connection closed)) at link acm-local.local/wp-json/oembed/1.0/embed?url=http%3A%2F%2Facm-local.local%2Fflagship-events%2F&format=xml (from acm-local.local/flagship-events/)
+04:19:47	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png (from acm-local.local/student-chapters/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 2 seconds : 111 links scanned, 71 files written (7389515 bytes overall) [5944385 bytes received at 24563 bytes/sec], 3439874 bytes transferred using HTTP compression in 77 files, ratio 27%, 4.3 requests per connection
+(22 errors, 21 warnings, 0 messages)
